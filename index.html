@@ -25,10 +25,10 @@
         <div class="carousel__main">
   
           <div class="carousel__main__image active">
-            <img src="img/01.jpg" alt="img1">
+            <img :src="databaseImage[counter]" :alt="captionTitle[counter]">
             <div class="carousel__main__image__text">
-              <h3>Svezia</h3>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis</p>
+              <h3>{{captionTitle[counter]}}</h3>
+              <p>{{captionText[counter]}}</p>
             </div>
           </div>
   
@@ -36,12 +36,12 @@
   
         <div class="carousel__control">
   
-          <div class="carousel__control__image active">
-            <img src="img/01.jpg" alt="img1">
+          <div v-for='image in databaseImage' class="carousel__control__image">
+            <img :src="image" :alt="title">
           </div>
   
-          <div class="up">&#x2C4;</div>
-          <div class="down">&#x2C5;</div>
+          <div @click="changeImgageUp" class="up">&#x2C4;</div>
+          <div @click="changeImgageDown" class="down">&#x2C5;</div>
     
         </div>
   
