@@ -8,9 +8,6 @@
 const app = new Vue({
 
   el: '#app',
-  mounted() {
-
-  },
   data: {
     databaseImage: [
       'img/01.jpg',
@@ -36,6 +33,13 @@ const app = new Vue({
     counter: 0,
     active: 'active'
   },
+  mounted() {
+
+    setInterval(() => {
+      this.changeImgageDown();
+    },3000);
+    
+  },
   methods: {
 
     changeImgageUp() {
@@ -55,7 +59,7 @@ const app = new Vue({
       }
       // console.log(this.counter);
     },
-    
+
   }
 
 });

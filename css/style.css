@@ -102,6 +102,7 @@ header {
   font-weight: bold;
   font-size: 16px;
   z-index: 999;
+  user-select: none;
 }
 
 .up {
