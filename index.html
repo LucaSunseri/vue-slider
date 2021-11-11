@@ -36,8 +36,8 @@
   
         <div class="carousel__control">
   
-          <div v-for='image in databaseImage' class="carousel__control__image">
-            <img :src="image" :alt="title">
+          <div v-for='(image, index) in databaseImage' class="carousel__control__image" :class="{active: (index === counter)}">
+            <img :src="image" :alt="image">
           </div>
   
           <div @click="changeImgageUp" class="up">&#x2C4;</div>

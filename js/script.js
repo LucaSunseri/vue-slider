@@ -34,6 +34,7 @@ const app = new Vue({
       'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
     ],
     counter: 0,
+    active: 'active'
   },
   methods: {
 
@@ -53,7 +54,8 @@ const app = new Vue({
         this.counter = 0;
       }
       // console.log(this.counter);
-    }
+    },
+    
   }
 
 });
